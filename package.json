@@ -1,0 +1,38 @@
+{
+  "name": "ccf-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json",
+    "watch": "nodemon --ext ts --exec 'npm test'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^3.1.0",
+    "jasmine": "^3.5.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "lint-staged": "^9.4.3",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "@types/jasmine": "^3.4.6"
+  },
+  "husky": {
+    "hooks": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
